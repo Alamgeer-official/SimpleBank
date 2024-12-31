@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"math/rand"
 	"strings"
-	// "time"
+	"time"
 )
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-// func init() {
-// 	rand.Seed(time.Now().UnixNano())
-// }
+func init() {
+	rand.Seed(time.Now().UnixNano())
+}
 
 // RandomInt generates a random integer between min and max
 func RandomInt(min, max int64) int64 {
@@ -43,7 +43,7 @@ func RandomMoney() int64 {
 
 // RandomCurrency generates a random currency code
 func RandomCurrency() string {
-	currencies := []string{"USD", "EUR", "INR"}
+	currencies := []string{USD, EUR, CAD}
 	n := len(currencies)
 	return currencies[rand.Intn(n)]
 }
